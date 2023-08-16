@@ -1,5 +1,21 @@
 import React from 'react';
 
+const percentage = 34;
+
+function getColorFromPercentage(percentage) {
+  if (percentage >= 90) {
+    return "#7C3AED";
+  } else if (percentage <= 89 && percentage >= 80) {
+    return "#814095";
+  } else if (percentage <= 79 && percentage >= 70) {
+    return "#5D3FD3	";
+  } else if (percentage <= 69 && percentage >= 60) {
+    return "#E5422C";
+  } else {
+    return "red";
+  }
+}
+
 function shadeColor(color, percent) {
     let R = parseInt(color.substring(1, 3), 16);
     let G = parseInt(color.substring(3, 5), 16);
@@ -151,14 +167,14 @@ const CircularProgressBar = ({
             />
     
             <text
-                fill="#7C3AEC"
+                fill={getColorFromPercentage(percentage)}
                 fontSize={valueFontSize}
                 fontWeight="bold"
                 x={radius}
                 y={textValueY}
                 textAnchor="middle"
             >
-                {text}%
+                {percentage}%
             </text>
     
             {!!label.length && labelView}
