@@ -1,0 +1,91 @@
+/* Dropdown container styles */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+/* Input field styles */
+.dropdown-input {
+    padding: .7rem 1rem;
+    width: 15rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    outline: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 0.3rem #e7e6e6;
+    color: #7C7C7C80;
+}
+
+.dropdown-input:focus {
+    border-color: #007BFF; /* Change the border color when input is active */
+}
+
+/* Dropdown options styles */
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #06110A80;
+    font-size: .9rem;
+}
+
+.dropdown-container.open {
+    margin-bottom: 3rem; /* Adjust the padding when the dropdown is open */
+    z-index: 99;
+}
+
+.option {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.option:hover {
+    background-color: #EFF6FF;
+    color: #000;
+}
+
+.right-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    margin-left: 15rem;
+}
+
+.right-div h1 {
+    font-size: 4rem;
+    color: var(--score-color);
+}
+
+.right-div button {
+    background-color: var(--score-color);
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+    padding: .9rem 2rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .dropdown-input {
+        width: 13rem;
+    }
+    .right-div {
+        margin-left: 0;
+    }
+    .right-div button {
+        padding: .4rem 1rem;
+        margin-top: .8rem;
+    }
+}

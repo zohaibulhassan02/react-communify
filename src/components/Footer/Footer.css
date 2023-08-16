@@ -1,0 +1,9 @@
+
+@media screen and (max-width: 600px) {
+   .footer {
+    margin-right: 0;
+   }
+   .footer p {
+    font-size: .7rem;
+   }
+}

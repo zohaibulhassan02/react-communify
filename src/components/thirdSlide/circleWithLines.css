@@ -1,0 +1,45 @@
+.circle {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.circle::before {
+    content: '';
+    width: 8rem;
+    height: 20rem;
+    position: absolute;
+    background: linear-gradient(#7C3AED, #814095);
+    animation: animate 4.5s linear infinite;
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background: white;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.circle h1 {
+    position: relative;
+    font-size: 3rem;
+    z-index: 10;
+}

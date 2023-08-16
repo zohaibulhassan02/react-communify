@@ -1,0 +1,120 @@
+.container {
+    width: 100vw;
+    text-align: center;
+    height: auto;
+    margin-top: 5rem;
+}
+
+.container .content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.content .main-div {
+    width: 80%;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 65% 15%;
+}
+
+.main-div .left-div .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.box-container .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 20rem;
+    height: 3.2rem;
+    padding: var(--search-padding);
+    border-radius: 3rem;
+    box-shadow: 0 0 0.3rem #e7e6e6;
+    margin-bottom: 2rem;
+}
+
+.box h4 {
+    font-size: .9rem;
+    color: #353535;
+}
+
+.box svg {
+    font-size: 1.2rem;
+    color: var(--score-color);
+}
+
+.box-container h5 {
+    color: var(--score-color);
+    font-size: .9rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.btns {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.btns.right {
+    display: none;
+}
+
+.btns button {
+    background-color: var(--score-color);
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+    padding: .8rem 1.7rem;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        height: auto;
+        margin-top: 1rem;
+    }
+    .container .content {
+        gap: .2rem;
+    }
+    .content .main-div {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .main-div .left-div .box-container {
+        flex-direction: column;
+        gap: .5rem;
+    }
+    .box-container .box {
+        margin-bottom: 1rem;
+        margin-top: .5rem;
+    }
+    .box-container h5 {
+        margin-bottom: 1rem;
+    }
+    .btns.left{
+        display: none;
+    }
+    .btns.right {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    .btns.right button {
+        padding: .4rem 1rem;
+        font-size: .8rem;
+    }
+    .main-div .right-div h1{
+        margin-top: 1.5rem;
+    }
+}
