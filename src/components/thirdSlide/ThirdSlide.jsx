@@ -10,7 +10,8 @@ import "./Dropdown";
 import CircleWithLines from "./circleWithLines";
 import Dropdown from "./Dropdown";
 import Popup from "./Popup";
-import Footer from '../Footer/Footer'
+import Footer from "../Footer/Footer";
+import CircularProgressBar from "../../ind";
 
 const ThirdSlide = () => {
   const options1 = [
@@ -28,73 +29,108 @@ const ThirdSlide = () => {
 
   return (
     <>
-    <div className="container">
-      <div className="content">
-        <h2 className="heading">Community Score</h2>
-        <div className="main-div">
-          <div className="left-div">
-            <div className="box-container">
-              <div className="box">
-                <FaHeartbeat />
-                <h4>Healthcare Quality</h4>
-                <BiInfoCircle onClick={togglePopup} style={{cursor: "pointer"}}/>
-                {isPopupOpen && <Popup onClose={() => setIsPopupOpen(false)} />}
+      <div className="container">
+        <div className="content">
+          <h2 className="heading">Community Score</h2>
+          <div className="main-div">
+            <div className="left-div">
+              <div className="box-container">
+                <div className="box">
+                  <FaHeartbeat />
+                  <h4>Healthcare Quality</h4>
+                  <BiInfoCircle
+                    onClick={togglePopup}
+                    style={{ cursor: "pointer" }}
+                  />
+                  {isPopupOpen && (
+                    <Popup onClose={() => setIsPopupOpen(false)} />
+                  )}
+                </div>
+                <h5>86%</h5>
+                <div>
+                  <Dropdown options={options1} />
+                </div>
               </div>
-              <h5>86%</h5>
-              <div>
-                <Dropdown options={options1} />
-              </div>
-            </div>
 
-            <div className="box-container">
-              <div className="box">
-                <GiSandCastle />
-                <h4>Events and Activities</h4>
-                <BiInfoCircle onClick={togglePopup} style={{cursor: "pointer"}}/>
-                {isPopupOpen && <Popup onClose={() => setIsPopupOpen(false)} />}
+              <div className="box-container">
+                <div className="box">
+                  <GiSandCastle />
+                  <h4>Events and Activities</h4>
+                  <BiInfoCircle
+                    onClick={togglePopup}
+                    style={{ cursor: "pointer" }}
+                  />
+                  {isPopupOpen && (
+                    <Popup onClose={() => setIsPopupOpen(false)} />
+                  )}
+                </div>
+                <h5>86%</h5>
+                <div>
+                  <Dropdown options={options1} />
+                </div>
               </div>
-              <h5>86%</h5>
-              <div>
-                <Dropdown options={options1} />
-              </div>
-            </div>
 
-            <div className="box-container">
-              <div className="box">
-                <PiTreeEvergreenFill />
-                <h4>Parks And Outdoors</h4>
-                <BiInfoCircle onClick={togglePopup} style={{cursor: "pointer"}}/>
-                {isPopupOpen && <Popup onClose={() => setIsPopupOpen(false)} />}
+              <div className="box-container">
+                <div className="box">
+                  <PiTreeEvergreenFill />
+                  <h4>Parks And Outdoors</h4>
+                  <BiInfoCircle
+                    onClick={togglePopup}
+                    style={{ cursor: "pointer" }}
+                  />
+                  {isPopupOpen && (
+                    <Popup onClose={() => setIsPopupOpen(false)} />
+                  )}
+                </div>
+                <h5>86%</h5>
+                <div>
+                  <Dropdown options={options1} />
+                </div>
               </div>
-              <h5>86%</h5>
-              <div>
-                <Dropdown options={options1} />
-              </div>
-            </div>
 
-            <div className="box-container">
-              <div className="box">
-                <FaUsers />
-                <h4 style={{ fontSize: ".835rem" }}>Community Amenities</h4>
-                <BiInfoCircle onClick={togglePopup} style={{cursor: "pointer"}}/>
-                {isPopupOpen && <Popup onClose={() => setIsPopupOpen(false)} />}
-              </div>
-              <h5>86%</h5>
-              <div>
-                <Dropdown options={options1} />
+              <div className="box-container">
+                <div className="box">
+                  <FaUsers />
+                  <h4 style={{ fontSize: ".835rem" }}>Community Amenities</h4>
+                  <BiInfoCircle
+                    onClick={togglePopup}
+                    style={{ cursor: "pointer" }}
+                  />
+                  {isPopupOpen && (
+                    <Popup onClose={() => setIsPopupOpen(false)} />
+                  )}
+                </div>
+                <h5>86%</h5>
+                <div>
+                  <Dropdown options={options1} />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="right-div">
-          <CircleWithLines />
-            <button>
-              <nobr>Set To Default</nobr>
-            </button>
+            <div className="right-div">
+              <div
+                style={{
+                  boxShadow:
+                    "0px 0px 62.02641677856445px 0px rgba(0, 0, 0, 0.05)",
+                  borderRadius: "100%",
+                }}
+              >
+                <CircularProgressBar
+                  selectedValue={(25 / 100) * 86}
+                  text={86}
+                  maxValue={25}
+                  textColor="#f00"
+                  activeStrokeColor="#7C3AEC"
+                  withGradient
+                />
+              </div>
+              <button>
+                <nobr>Set To Default</nobr>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 };

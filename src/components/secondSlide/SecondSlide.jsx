@@ -6,11 +6,10 @@ import { GiSandCastle } from "react-icons/gi";
 import { PiTreeEvergreenFill } from "react-icons/pi";
 import { FaUsers } from "react-icons/fa";
 import "./slider.css";
-import CircleWithLines from "../thirdSlide/circleWithLines";
 import Popup from "../thirdSlide/Popup";
+import CircularProgressBar from "../../ind";
 
 const useSlider = () => {
- 
   const [sliderValue, setSliderValue] = useState(0);
   const [thumbColor, setThumbColor] = useState("#007BFF");
 
@@ -68,7 +67,6 @@ const Slider = () => {
 };
 
 const SecondSlide = () => {
- 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const togglePopup = () => {
@@ -142,8 +140,23 @@ const SecondSlide = () => {
               </button>
             </div>
           </div>
-          <div className="right-div" style={{marginTop: "2rem"}}>
-            <CircleWithLines/>
+          <div className="right-div" style={{ marginTop: "2rem" }}>
+            <div
+              style={{
+                boxShadow:
+                  "0px 0px 62.02641677856445px 0px rgba(0, 0, 0, 0.05)",
+                borderRadius: "100%",
+              }}
+            >
+              <CircularProgressBar
+                selectedValue={(25 / 100) * 86}
+                text={86}
+                maxValue={25}
+                textColor="#f00"
+                activeStrokeColor="#7C3AEC"
+                withGradient
+              />
+            </div>
             <div className="btns right">
               <button>Set To Default</button>
               <button style={{ backgroundColor: "#814095" }}>
